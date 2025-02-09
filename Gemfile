@@ -9,6 +9,9 @@ gem "sqlite3"
 
 gem "propshaft"
 
+gem "view_component"
+
+
 # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
 gem "rubocop-rails-omakase", require: false
 
