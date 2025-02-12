@@ -2,10 +2,10 @@
 
 module UiComponents
   class ButtonComponent < ViewComponent::Base
-    def initialize(text:, type: "primary", size: "md")
+    def initialize(text:, type: :primary, size: :md)
       @text = text
-      @type = type
-      @size = size
+      @type = type.to_s
+      @size = size.to_s
     end
 
     def call
@@ -29,7 +29,7 @@ module UiComponents
         danger: "bg-purple-500 text-white hover:bg-purple-600"
       }
 
-      "#{base_classes} #{size_classes[@size]} #{type_classes[@type]}"
+      "#{base_classes} #{size_classes[@size.to_sym]} #{type_classes[@type.to_sym]}"
     end
   end
 end
